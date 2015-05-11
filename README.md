@@ -8,7 +8,13 @@ A tool to manage Rackspace Cloud servers and Block Storage volumes
 
 USAGE
 
+In your Gemfile
+
+    gem "digitalronin-rackspace", require: "rackspace"
+
 Create an 8G General Purpose VM with an attached 75G SATA block storage volume;
+
+    require 'rackspace'
 
     vm = Rackspace::Vm.new(
       size:     8,
