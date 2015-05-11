@@ -13,7 +13,7 @@ module Rackspace
     end
 
     def find_by_name(name)
-      api.servers.detect {|i| i.name == name}
+      api.servers.detect {|i| i.name == name && i.state != 'DELETED'}
     end
 
     def create(params)
