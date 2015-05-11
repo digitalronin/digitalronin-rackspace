@@ -13,11 +13,11 @@ module Rackspace
     end
 
     def find_by_name(name)
-      api.servers.detect {|i| i.name == name && i.state != 'DELETED'}
+      servers.detect {|i| i.name == name && i.state != 'DELETED'}
     end
 
     def create(params)
-      api.servers.create(params)
+      servers.create(params)
       wait_for params.fetch(:name)
     end
 
@@ -25,6 +25,10 @@ module Rackspace
       img = api.images.detect {|i| i.name == img_name}
       raise "No such server image #{img_name}" if img.nil?
       img
+    end
+
+    def servers
+      api.servers
     end
 
     private
