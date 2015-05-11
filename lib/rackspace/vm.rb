@@ -9,6 +9,7 @@ module Rackspace
       @size              = params.fetch(:size,        DEFAULT_SIZE)
       @flavor_id         = params.fetch(:flavor_id,   "#{DEFAULT_FLAVOUR}-#{size}")
       @volume_definition = params[:volume]
+      @state             = params[:state]  # Allow this to be passed in, if we know it already
     end
 
     def create
@@ -31,6 +32,10 @@ module Rackspace
       self
     end
 
+    def age_in_seconds
+      server.created && (Time.now - Time.parse(server.created)).to_i
+    end
+
     def public_ip
       server.ipv4_address
     end
@@ -40,7 +45,7 @@ module Rackspace
     end
 
     def state
-      server.state
+      @state ||= server.state
     end
 
     def attach_volume(vol)
