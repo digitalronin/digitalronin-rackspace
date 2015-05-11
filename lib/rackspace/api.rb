@@ -9,7 +9,7 @@ module Rackspace
     private
 
     def wait_for(name)
-      log "Waiting for #{object_type} #{name}"
+      logger.log "Waiting for #{object_type} #{name}"
 
       obj = nil; ready = false; iterations = 1
 
@@ -17,9 +17,9 @@ module Rackspace
         obj = find_by_name(name)
 
         if obj.nil?
-          log "Waiting for #{object_type} #{name} to appear in API list..."
+          logger.log "Waiting for #{object_type} #{name} to appear in API list..."
         else
-          log "Found #{object_type} #{name}. Status: #{obj.state}, check #{iterations} of #{MAX_ITERATIONS_ON_CREATE}"
+          logger.log "Found #{object_type} #{name}. Status: #{obj.state}, check #{iterations} of #{MAX_ITERATIONS_ON_CREATE}"
 
           if obj.state == ready_state
             ready = true
