@@ -4,7 +4,7 @@ A tool to manage Rackspace Cloud servers and Block Storage volumes
 [![Build Status](https://travis-ci.org/digitalronin/digitalronin-rackspace.svg?branch=master)](https://travis-ci.org/digitalronin/digitalronin-rackspace)
 [![Dependency Status](https://gemnasium.com/digitalronin/digitalronin-rackspace.svg)](https://gemnasium.com/digitalronin/digitalronin-rackspace)
 
-fog(http://fog.io) is awesome, but the API can be a bit cryptic and long-winded, especially for things like creating a VM with an attached block storage volume
+[fog](http://fog.io) is awesome, but the API can be a bit cryptic and long-winded, especially for things like creating a VM with an attached block storage volume
 
 USAGE
 
