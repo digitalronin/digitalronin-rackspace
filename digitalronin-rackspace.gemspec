@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
-# stub: digitalronin-rackspace 0.1.6 ruby lib
+# stub: digitalronin-rackspace 0.1.7 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "digitalronin-rackspace"
-  s.version = "0.1.6"
+  s.version = "0.1.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Salgado"]
-  s.date = "2015-06-09"
+  s.date = "2015-08-16"
   s.description = "Create/Query/Destroy rackspace cloud VMs and attached (or not) block storage volumes"
   s.email = "david@digitalronin.com"
   s.extra_rdoc_files = ["README.md"]
