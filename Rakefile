@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "digitalronin-rackspace"
-  s.version           = "0.1.6"
+  s.version           = "0.1.7"
   s.summary           = "Rackspace Cloud Servers and Block Storage Volumes"
   s.description       = "Create/Query/Destroy rackspace cloud VMs and attached (or not) block storage volumes"
   s.author            = "David Salgado"
@@ -81,7 +81,12 @@ task clean: [:clobber_rdoc, :clobber_package] do
   rm "#{spec.name}.gemspec"
 end
 
-desc 'Rebuild and push to rubygems'
-task rebuild: :clean do
+task rebuild: [:clean, :package] do
+  system "rm -rf ~/admoda/conductor/pkg"
+  system "cp -r pkg ~/admoda/conductor/"
+  system "cp digitalronin-rackspace.gemspec `find ~/admoda/conductor/pkg/ -type d -depth 1`"
+end
+
+task push: [:clean, :package] do
   system "gem push pkg/*.gem"
 end
