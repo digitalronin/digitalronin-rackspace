@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "digitalronin-rackspace"
-  s.version           = "0.1.7"
+  s.version           = "0.1.8"
   s.summary           = "Rackspace Cloud Servers and Block Storage Volumes"
   s.description       = "Create/Query/Destroy rackspace cloud VMs and attached (or not) block storage volumes"
   s.author            = "David Salgado"
@@ -50,7 +50,7 @@ end
 # be automatically building a gem for this project. If you're not
 # using GitHub, edit as appropriate.
 #
-# To publish your gem online, install the 'gemcutter' gem; Read more 
+# To publish your gem online, install the 'gemcutter' gem; Read more
 # about that here: http://gemcutter.org/pages/gem_docs
 Gem::PackageTask.new(spec) do |pkg|
   pkg.gem_spec = spec
