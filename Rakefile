@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "digitalronin-rackspace"
-  s.version           = "0.1.8"
+  s.version           = "0.1.9"
   s.summary           = "Rackspace Cloud Servers and Block Storage Volumes"
   s.description       = "Create/Query/Destroy rackspace cloud VMs and attached (or not) block storage volumes"
   s.author            = "David Salgado"
