@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
-# stub: digitalronin-rackspace 0.1.9 ruby lib
+# stub: digitalronin-rackspace 0.1.10 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "digitalronin-rackspace"
-  s.version = "0.1.9"
+  s.version = "0.1.10"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Salgado"]
-  s.date = "2015-12-19"
+  s.date = "2016-01-04"
   s.description = "Create/Query/Destroy rackspace cloud VMs and attached (or not) block storage volumes"
   s.email = "david@digitalronin.com"
   s.extra_rdoc_files = ["README.md"]
-  s.files = ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "lib/rackspace", "lib/rackspace.rb", "lib/rackspace/api.rb", "lib/rackspace/base.rb", "lib/rackspace/logger.rb", "lib/rackspace/server_api.rb", "lib/rackspace/storage_api.rb", "lib/rackspace/vm.rb", "lib/rackspace/volume.rb", "spec/rackspace", "spec/rackspace/vm_spec.rb", "spec/rackspace/volume_spec.rb", "spec/spec_helper.rb"]
+  s.files = ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "lib/rackspace.rb", "lib/rackspace/api.rb", "lib/rackspace/base.rb", "lib/rackspace/logger.rb", "lib/rackspace/server_api.rb", "lib/rackspace/storage_api.rb", "lib/rackspace/vm.rb", "lib/rackspace/volume.rb", "spec/rackspace/vm_spec.rb", "spec/rackspace/volume_spec.rb", "spec/spec_helper.rb"]
   s.homepage = "https://github.com/digitalronin/digitalronin-rackspace"
   s.licenses = ["MIT"]
   s.rdoc_options = ["--main", "README.md"]
